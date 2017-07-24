@@ -1,0 +1,43 @@
+h1 {
+  margin: 0;
+  color: red;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 72px;
+}
+
+#f,
+#y,
+#s {
+  color: red;
+}
+
+#r,
+#a {
+  color: orange;
+}
+
+#i,
+#c {
+  color: yellow;
+}
+
+#e,
+#e2 {
+  color: green;
+}
+
+#n,
+#r2 {
+  color: blue;
+}
+
+#d,
+#o {
+  color: indigo;
+}
+
+#l,
+#f2,
+#t {
+  color: violet;
+}
