@@ -1,27 +1,48 @@
-.foo {
+.container {
   display: flex;
   flex-direction: column;
 }
 
 .dateCity {
+  height: 100px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .date,
-.city,
-.now {
+.city {
   color: #ffffff;
 }
 
 .temp,
+.degrees,
 .image,
 .currentCondition {
-  color: #ffffff;
+  width: 33.33333%;
+  font-family: 'Architects Daughter', cursive;
 }
 
 .now {
   display: flex;
   justify-content: space-around;
-  background-color: purple;
+  margin-top: 75px;
+}
+
+.temp {
+  padding-top: 25px;
+  color: #EF5350;
+  font-size: 75px;
+  text-align: center;
+}
+
+.currentCondition {
+  padding-top: 50px;
+  color: #1291BB;
+  font-size: 35px;
+  text-align: center;
+}
+
+.image {
+  height: 150px;
 }
