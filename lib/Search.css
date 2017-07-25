@@ -1,39 +1,20 @@
-.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-input,
-button {
-  width: 50%
+.search-container {
+  height: 75px;
 }
 
 input {
+  width: 500px;
   height: 100px;
-  margin-top: 50px;
-  padding-left: 20px;
+  padding: 0 10px;
   background-color: #363636;
   border: none;
   color: #C7C8C9;
   font-family: 'Architects Daughter', cursive;
-  font-size: 40px;
+  font-size: 24px;
   outline: none;
 }
 
 input::placeholder {
   text-align: center;
   color: #C7C8C9;
-}
-
-button {
-  width: 25%;
-  height: 50px;
-  margin-top: 50px;
-  border: none;
-  background-color: #C7C8C9;
-  color: #363636;
-  font-family: 'Architects Daughter', cursive;
-  font-size: 24px;
-  outline: none;
 }
