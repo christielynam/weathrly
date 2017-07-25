@@ -1,0 +1,32 @@
+.header {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center;*/
+  padding: 50px;
+  background-color: grey;
+}
+
+.logo {
+  display: flex;
+  /*align-self: center;*/
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: left;
+}
+
+button {
+  height: 100px;
+  width: 400px;
+  margin-left: 400px;
+  background-color: #1291BB;
+  /*background-image: url('/Users/christielynam/turing/mod2/projects/weathrly/assets/pin.svg');*/
+  background-repeat: no-repeat;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 30px;
+
+}

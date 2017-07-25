@@ -1,0 +1,27 @@
+.foo {
+  display: flex;
+  flex-direction: column;
+}
+
+.dateCity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date,
+.city,
+.now {
+  color: #ffffff;
+}
+
+.temp,
+.image,
+.currentCondition {
+  color: #ffffff;
+}
+
+.now {
+  display: flex;
+  justify-content: space-around;
+  background-color: purple;
+}

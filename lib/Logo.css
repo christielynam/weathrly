@@ -5,6 +5,10 @@ h1 {
   font-size: 72px;
 }
 
+.friendly {
+  margin-top: 25px;
+}
+
 #f,
 #y,
 #s {
