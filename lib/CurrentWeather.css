@@ -13,15 +13,12 @@
   text-align: center;
 }
 
-.dateCity {
+.city {
   height: 100px;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  /*justify-content: space-between;*/
+  text-align: center;
 }
 
-.date,
 .city {
   color: #ffffff;
   font-size: 36px;
