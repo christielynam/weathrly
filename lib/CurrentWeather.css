@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  background-color: #1E2023;
 }
 
 .dateCity {
@@ -24,6 +25,7 @@
 }
 
 .now {
+  height: 500px;
   display: flex;
   justify-content: space-around;
   margin-top: 75px;
@@ -36,6 +38,10 @@
   text-align: center;
 }
 
+.image {
+  height: 150px;
+}
+
 .currentCondition {
   padding-top: 50px;
   color: #1291BB;
@@ -43,6 +49,31 @@
   text-align: center;
 }
 
-.image {
-  height: 150px;
+.hi {
+  border-bottom: 2px solid #ffffff;
+}
+
+.hi,
+.low {
+  width: 100px;
+  color: #ffffff;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 50px;
+}
+
+.low {
+  color: #C7C8C9;
+}
+
+.today {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dailyCondition {
+  width: 600px;
+  padding-top: 25px;
+  color: #C7C8C9;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 24px;
 }
