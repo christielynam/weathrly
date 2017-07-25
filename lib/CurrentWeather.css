@@ -1,27 +1,79 @@
-.foo {
+.container {
   display: flex;
   flex-direction: column;
+  background-color: #1E2023;
 }
 
 .dateCity {
+  height: 100px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .date,
-.city,
-.now {
+.city {
   color: #ffffff;
 }
 
 .temp,
+.degrees,
 .image,
 .currentCondition {
-  color: #ffffff;
+  width: 33.33333%;
+  font-family: 'Architects Daughter', cursive;
 }
 
 .now {
+  height: 500px;
   display: flex;
   justify-content: space-around;
-  background-color: purple;
+  margin-top: 75px;
+}
+
+.temp {
+  padding-top: 25px;
+  color: #EF5350;
+  font-size: 75px;
+  text-align: center;
+}
+
+.image {
+  height: 150px;
+}
+
+.currentCondition {
+  padding-top: 50px;
+  color: #1291BB;
+  font-size: 35px;
+  text-align: center;
+}
+
+.hi {
+  border-bottom: 2px solid #ffffff;
+}
+
+.hi,
+.low {
+  width: 100px;
+  color: #ffffff;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 50px;
+}
+
+.low {
+  color: #C7C8C9;
+}
+
+.today {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dailyCondition {
+  width: 600px;
+  padding-top: 25px;
+  color: #C7C8C9;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 24px;
 }
