@@ -2,37 +2,18 @@
   height: 200px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 25px;
   border-bottom: 2px solid #363636;
 }
 
 .logo {
-  height: 100px;
+  height: 175px;
   display: flex;
   flex-direction: column;
 }
 
-h1 {
-  font-size: 60px;
-  text-align: left;
-}
-
-.quote {
-  width: 33.33333%;
-  margin-top: 40px;
-  color: yellow;
-  font-family: 'Architects Daughter', cursive;
-  font-size: 30px;
-}
-
-button {
-  height: 100px;
-  width: 275px;
-  background-color: #1291BB;
-  /*background-image: url('/Users/christielynam/turing/mod2/projects/weathrly/assets/pin.svg');*/
-  background-repeat: no-repeat;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 30px;
-
+.friendly,
+.forecast {
+  font-size: 75px;
 }

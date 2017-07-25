@@ -1,12 +1,6 @@
-h1 {
-  margin: 0;
-  color: red;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 72px;
-}
-
-.friendly {
-  margin-top: 25px;
+.friendly,
+.forecast {
+  font-size: 60px;
 }
 
 #f,
