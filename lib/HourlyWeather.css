@@ -1,4 +1,17 @@
 .hourlyContainer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  /*justify-content: space-around;*/
+}
+
+.hourlyForecast {
+  color: #ffffff;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 36px;
+  text-align: center;
+}
+
+.hourlyCardContainer {
+  display: flex;
+  justify-content: center;
 }
