@@ -3,12 +3,12 @@
   display: flex;
   flex-direction: column;
   background-color: #1E2023;
+  font-family: 'Architects Daughter', cursive;
 }
 
 .quote {
   margin-bottom: 50px;
   color: yellow;
-  font-family: 'Architects Daughter', cursive;
   font-size: 36px;
   text-align: center;
 }
@@ -16,49 +16,42 @@
 .city {
   height: 100px;
   padding: 0 20px;
-  text-align: center;
-}
-
-.city {
   color: #ffffff;
   font-size: 36px;
-}
-
-.temp,
-.degrees,
-.image,
-.currentCondition {
-  width: 33.33333%;
-  font-family: 'Architects Daughter', cursive;
+  text-align: center;
 }
 
 .now {
   height: 200px;
   display: flex;
   justify-content: space-around;
-  /*margin-top: 75px;*/
+  align-items: center;
+}
+
+.temp,
+.image,
+.currentCondition {
+  height: 150px;
+  width: 33.33333%;
+  text-align: center;
 }
 
 .temp {
   padding-top: 25px;
   color: #EF5350;
   font-size: 75px;
-  text-align: center;
-}
-
-.image {
-  height: 150px;
 }
 
 .currentCondition {
   padding-top: 50px;
   color: #1291BB;
-  font-size: 35px;
-  text-align: center;
+  font-size: 36px;
 }
 
-.hi {
-  border-bottom: 2px solid #ffffff;
+.today {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
 }
 
 .hi,
@@ -69,19 +62,16 @@
   font-size: 50px;
 }
 
+.hi {
+  border-bottom: 2px solid #363636;
+}
+
 .low {
   color: #C7C8C9;
 }
 
-.today {
-  display: flex;
-  justify-content: space-around;
-}
-
 .dailyCondition {
-  width: 500px;
-  padding-top: 25px;
+  width: 700px;
   color: #C7C8C9;
-  font-family: 'Architects Daughter', cursive;
   font-size: 36px;
 }
