@@ -1,6 +1,7 @@
 .friendly,
 .forecast {
-  font-size: 60px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 75px;
 }
 
 #f,

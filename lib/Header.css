@@ -7,18 +7,8 @@
   border-bottom: 2px solid #363636;
 }
 
-.logo {
-  height: 175px;
-  display: flex;
-  flex-direction: column;
-}
-
-.friendly,
-.forecast {
-  font-size: 75px;
-}
-
 .date {
+  font-family: 'Architects Daughter', cursive;
   font-size: 32px;
   color: #FFF;
 }
