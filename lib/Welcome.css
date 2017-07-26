@@ -1,29 +1,24 @@
-div {
+.welcomeContainer {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   background-color: #1E2023;
-}
-
-h1,
-h3 {
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  color: red;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 120px;
 }
 
 .friendly,
 .forecast {
-  text-align:center;
+  font-size: 120px;
+  text-align: center;
 }
 
-h3 {
+.welcomeQuote {
   margin: 20px;
   color: yellow;
+  font-family: 'Architects Daughter', cursive;
   font-size: 36px;
+  text-align: center;
 }
 
 /*.selector {*/
