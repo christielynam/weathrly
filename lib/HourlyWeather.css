@@ -5,7 +5,7 @@
 }
 
 .hourlyForecast {
-  color: #ffffff;
+  color: #C6C7C8;
   font-family: 'Architects Daughter', cursive;
   font-size: 36px;
   text-align: center;
@@ -13,5 +13,6 @@
 
 .hourlyCardContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }

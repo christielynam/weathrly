@@ -1,5 +1,17 @@
 .dailyContainer {
   display: flex;
+  flex-direction: column;
+}
+
+.dailyForecast {
+  color: #C6C7C8;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 36px;
+  text-align: center;
+}
+
+.dailyCardContainer {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
