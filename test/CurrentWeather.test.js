@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../lib/App';
+import CurrentWeather from '../lib/CurrentWeather';
 
-describe('App', () => {
+
+describe('CurrentWeather', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<CurrentWeather />);
   });
 
   afterEach(() => {

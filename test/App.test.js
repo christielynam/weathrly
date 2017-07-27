@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import CurrentWeather from '../lib/CurrentWeather';
+import App from '../lib/App';
 
-describe('CurrentWeather', () => {
+describe('App', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<CurCurrentWeather />);
+    wrapper = shallow(<App />);
   });
 
   afterEach(() => {
@@ -16,6 +16,4 @@ describe('CurrentWeather', () => {
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
-
-
-})
+});
