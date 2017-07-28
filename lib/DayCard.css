@@ -8,16 +8,23 @@
   align-items: center;
 }
 
-.card,
-.cardImg,
-.cardTemp,
-.time {
+.dayHigh,
+.dayLow,
+.day {
   background-color: #ffffff;
   font-family: 'Architects Daughter', cursive;
+}
+
+.dayHigh,
+.dayLow {
   font-size: 32px;
 }
 
+.day {
+  font-size: 25px;
+}
+
 .cardImg {
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
 }
