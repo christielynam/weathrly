@@ -1,8 +1,7 @@
 .welcomeContainer {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   align-items: center;
   background-color: #1E2023;
 }
@@ -13,18 +12,14 @@
   text-align: center;
 }
 
+.friendly {
+  margin-top: 50px;
+}
+
 .welcomeQuote {
-  margin: 20px;
+  margin: 50px;
   color: yellow;
   font-family: 'Architects Daughter', cursive;
   font-size: 36px;
   text-align: center;
 }
-
-/*.selector {*/
-  /* Positioning */
-  /* Display & Box Model */
-  /* Color */
-  /* Text */
-  /* Other */
-/*}*/
