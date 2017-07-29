@@ -1,7 +1,8 @@
 .welcomeContainer {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  /*justify-content: space-around;*/
+  justify-content: space-around;
   align-items: center;
   background-color: #1E2023;
 }
@@ -10,10 +11,6 @@
 .forecast {
   font-size: 120px;
   text-align: center;
-}
-
-.friendly {
-  margin-top: 50px;
 }
 
 .welcomeQuote {
