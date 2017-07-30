@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import HourlyWeather from '../lib/HourlyWeather';
+import HourlyWeather from '../lib/Components/HourlyWeather/HourlyWeather';
+import localStorageMock from '../__mock__/localStorageMock.js';
 
 describe('HourlyWeather', () => {
   let wrapper;

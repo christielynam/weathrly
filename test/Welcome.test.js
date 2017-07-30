@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Welcome from '../lib/Welcome';
+import Welcome from '../lib/Components/Welcome/Welcome';
+import localStorageMock from '../__mock__/localStorageMock.js';
 
 describe('Welcome', () => {
   let wrapper;

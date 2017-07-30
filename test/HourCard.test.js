@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import WeatherCard from '../lib/WeatherCard';
+import WeatherCard from '../lib/Components/HourCard/HourCard';
+import localStorageMock from '../__mock__/localStorageMock.js';
 
 describe('WeatherCard', () => {
   let wrapper;
