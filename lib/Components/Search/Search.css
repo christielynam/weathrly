@@ -1,5 +1,5 @@
 .search-container {
-  height: 75px;
+  height: 50px;
 }
 
 input {
@@ -21,14 +21,16 @@ input::placeholder {
 
 .suggestions {
   margin-bottom: 20px;
-  background-color: #363636;
+  background-color: #C7C8C9;
   color: #C7C8C9;
   font-family: 'Architects Daughter', cursive;
   list-style-type: none;
 }
 
 li {
-  background-color: #363636;
+  background-color: #C7C8C9;
+  color: #363636;
+  font-size: 20px;
 }
 
 li:hover {
