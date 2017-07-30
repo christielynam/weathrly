@@ -20,7 +20,18 @@ input::placeholder {
 }
 
 .suggestions {
+  margin-bottom: 20px;
+  background-color: #363636;
   color: #C7C8C9;
   font-family: 'Architects Daughter', cursive;
   list-style-type: none;
+}
+
+li {
+  background-color: #363636;
+}
+
+li:hover {
+  color: #ffffff;
+  cursor: pointer;
 }
