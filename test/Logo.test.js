@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Logo from '../lib/Logo';
+import Logo from '../lib/Components/Logo/Logo';
+import localStorageMock from '../__mock__/localStorageMock.js';
 
 describe('Logo', () => {
   let wrapper;

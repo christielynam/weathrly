@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Header from '../lib/Header';
+import Header from '../lib/Components/Header/Header';
+import localStorageMock from '../__mock__/localStorageMock.js';
 
 describe('Header', () => {
   let wrapper;
