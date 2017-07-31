@@ -84,3 +84,10 @@
   height: 300px;
   width: 300px;
 }
+
+@media screen and (max-width: 900px) {
+  .mainContent {
+    flex-direction: column;
+  }
+
+}
