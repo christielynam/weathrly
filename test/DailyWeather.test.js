@@ -17,4 +17,8 @@ describe('DailyWeather', () => {
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
+
+  it('should render the DayCard component', () => {
+    expect(wrapper.find('DayCard').length).toEqual(1);
+  });
 });
