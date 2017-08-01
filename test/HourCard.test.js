@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import WeatherCard from '../lib/Components/HourCard/HourCard';
+import HourCard from '../lib/Components/HourCard/HourCard';
 import localStorageMock from '../__mock__/localStorageMock.js';
 
-describe('WeatherCard', () => {
+describe('HourCard', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<WeatherCard />);
+    wrapper = shallow(<HourCard />);
   });
 
   afterEach(() => {
@@ -16,5 +16,23 @@ describe('WeatherCard', () => {
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
+  });
+
+  it('should display a condition icon', () => {
+    const component = shallow(<HourCard />);
+    const icon = component.find('img');
+    expect(image.prop('src')).toEqual(`assets/${hour.img}.svg`);
+  });
+
+  it('should display a temp', () => {
+    const component = shallow(<HourCard />);
+    const temp = component.find('h3');
+    expect(temp.text()).toEqual('');
+  });
+
+  it('should display a time', () => {
+    const component = shallow(<HourCard />);
+    const time = component.find('p');
+    expect(time.text()).toEqual('');
   });
 });
