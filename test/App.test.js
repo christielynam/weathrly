@@ -40,15 +40,14 @@ describe('App', () => {
 
   it.skip('should be able to pull location back from localStorage', () => {
     localStorageMock.setItem('location', 'Birmingham, AL');
-    expect(wrapper.instance().getFromLocal()).toEqual('Birmingham, AL')
+    expect(wrapper.instance().getFromLocal()).toEqual('Birmingham, AL');
   });
 
   it('should render the Header, CurrentWeather, HourlyWeather, and DailyWeather components if a location persists', () => {
     wrapper.instance().setState({ location: 'Birmingham' });
-    expect(wrapper.find('Header').length).toEqual(1)
-    expect(wrapper.find('CurrentWeather').length).toEqual(1)
-    expect(wrapper.find('HourlyWeather').length).toEqual(1)
-    expect(wrapper.find('DailyWeather').length).toEqual(1)
+    expect(wrapper.find('Header').length).toEqual(1);
+    expect(wrapper.find('CurrentWeather').length).toEqual(1);
+    expect(wrapper.find('HourlyWeather').length).toEqual(1);
+    expect(wrapper.find('DailyWeather').length).toEqual(1);
   });
-
 });

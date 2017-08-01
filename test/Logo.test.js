@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Logo from '../lib/Components/Logo/Logo';
-import localStorageMock from '../__mock__/localStorageMock.js';
 
 describe('Logo', () => {
   let wrapper;
@@ -10,11 +9,19 @@ describe('Logo', () => {
     wrapper = shallow(<Logo />);
   });
 
-  afterEach(() => {
-    localStorage.clear();
-  });
-
   it('should exist', () => {
     expect(wrapper).toBeDefined();
+  });
+
+  it('should render the logo to the page', () => {
+    const component = shallow(<Logo />);
+    const logo = component.find('h1.friendly');
+    expect(logo.text()).toEqual('friendly');
+  });
+
+  it('should render the logo to the page', () => {
+    const component = shallow(<Logo />);
+    const logo = component.find('h1.forecast');
+    expect(logo.text()).toEqual('forecast');
   });
 });
