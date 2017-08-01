@@ -1,4 +1,4 @@
-const dataMock = {
+export default {
   "current_observation": {
 		"display_location": {
 		    "full":"Birmingham, AL",
@@ -30,5 +30,3 @@ const dataMock = {
     }
   },
 }
-
-export default dataMock
