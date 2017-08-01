@@ -17,4 +17,12 @@ describe('Search', () => {
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
+
+  it('should be a stateful component', () => {
+    wrapper.instance().setState({ hasState: true });
+    expect(wrapper.state('hasState')).toEqual(true);
+    wrapper.instance().setState({ hasState: false });
+    expect(wrapper.state('hasState')).toEqual(false);
+  });
+  
 });
