@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from '../lib/Components/App/App';
 import localStorageMock from '../__mock__/localStorageMock.js';
-import dataMock from '../__mock__/dataMock.js';
+import weatherData from '../__mock__/dataMock.js';
 
 describe('App', () => {
   let wrapper;
