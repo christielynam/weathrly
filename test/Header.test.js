@@ -17,4 +17,12 @@ describe('Header', () => {
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
+
+  it('should render the Logo component', () => {
+    expect(wrapper.find('Logo').length).toEqual(1);
+  });
+
+  it('should render the Search component', () => {
+    expect(wrapper.find('Search').length).toEqual(1);
+  });
 });
