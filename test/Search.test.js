@@ -27,6 +27,7 @@ describe('Search', () => {
     wrapper.instance().setState({ hasState: false });
     expect(wrapper.state('hasState')).toEqual(false);
   });
+<<<<<<< HEAD
 
   it('should set the state input on change', () => {
     wrapper.instance().setState();
@@ -34,4 +35,6 @@ describe('Search', () => {
     expect(wrapper.state('input')).toEqual('A');
   })
 
+=======
+>>>>>>> 1018de37a2f46c4470b11f06ba2a8a7934b534b3
 });
