@@ -37,7 +37,6 @@ describe('App', () => {
     expect(localStorageMock.getItem('location')).toEqual('Birmingham');
   });
 
-
   it.skip('should be able to pull location back from localStorage', () => {
     localStorageMock.setItem('location', 'Birmingham, AL');
     expect(wrapper.instance().getFromLocal()).toEqual('Birmingham, AL');
