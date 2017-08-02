@@ -42,6 +42,18 @@ describe('CurrentWeather', () => {
     expect(wrapper.find('.weatherIcon').prop('src')).toEqual('assets/mostlycloudy.svg');
   });
 
+<<<<<<< HEAD
+  it("should display today's expected high", () => {
+    expect(wrapper.find('p.high').prop('children').innerText).toEqual('88 degrees F')
+  });
+
+  it("should display today's expected low", () => {
+    expect(wrapper.find('p.low').prop('children')).toEqual('72')
+  });
+
+  it('should display a daily report', () => {
+    expect(wrapper.find('.dailyReport').prop('children')[0]).toEqual("Today's Forecast: ", "Mainly cloudy. Lows overnight in the low 70s.")
+=======
   it('should display todays expected high', () => {
     expect(weatherData.forecast.simpleforecast.forecastday[0].high.fahrenheit).toEqual('88');
   });
@@ -52,5 +64,6 @@ describe('CurrentWeather', () => {
 
   it.skip('should display a daily report', () => {
     expect(wrapper.find('.dailyReport').prop('children')).toEqual('Todays Forecast: , Mainly cloudy. Lows overnight in the low 70s.');
+>>>>>>> 1018de37a2f46c4470b11f06ba2a8a7934b534b3
   });
 });

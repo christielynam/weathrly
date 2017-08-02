@@ -7,6 +7,19 @@ import Location from '../lib/Components/Location';
 
 describe('DayCard', () => {
   let wrapper;
+<<<<<<< HEAD
+  let location = new Location(weatherData)
+
+  beforeEach(() => {
+
+    wrapper = shallow( <DayCard
+      img={location.dailyForecast[0].icon}
+      high={location.dailyForecast[0].high.fahrenheit}
+      high={location.dailyForecast[0].low.fahrenheit}
+      day={location.dailyForecast[0].date.weekday}
+      key={location.dailyForecast[0].period} />)
+    });
+=======
   const location = new Location(weatherData);
   const day = location.dailyForecast[0];
 
@@ -18,6 +31,7 @@ describe('DayCard', () => {
       day={day.date.weekday}
       key={day.period} />);
   });
+>>>>>>> 1018de37a2f46c4470b11f06ba2a8a7934b534b3
 
   afterEach(() => {
     localStorage.clear();
@@ -28,7 +42,11 @@ describe('DayCard', () => {
   });
 
   it('should display a condition icon', () => {
+<<<<<<< HEAD
+    expect(wrapper.node.props.children[0].props.src).toEqual('assets/mostlycloudy.svg')
+=======
     expect(wrapper.node.props.children[0].props.src).toEqual('assets/mostlycloudy.svg');
+>>>>>>> 1018de37a2f46c4470b11f06ba2a8a7934b534b3
   });
 
   it.skip('should display a high temp', () => {

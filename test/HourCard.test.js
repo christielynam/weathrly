@@ -3,37 +3,37 @@ import { shallow, mount } from 'enzyme';
 import HourCard from '../lib/Components/HourCard/HourCard';
 import localStorageMock from '../__mock__/localStorageMock.js';
 import weatherData from '../__mock__/dataMock.js';
-import Location from '../lib/Components/Location';
+import Location from '../lib/Components/Location'
 
 describe('HourCard', () => {
   let wrapper;
-  const location = new Location(weatherData);
-  const hour = location.hourlyForecast[0];
+  let location = new Location(weatherData)
 
   beforeEach(() => {
     wrapper = shallow(<HourCard
-      img={weatherData.hour.icon}
-      temp={hour.temp}
-      time={hour.time} />);
+      img={weatherData.hourly_forecast[0].icon}
+      temp={weatherData.hourly_forecast[0].temp.english}
+      time={weatherData.hourly_forecast[0].FCTTIME.civil}
+      key={weatherData.hourly_forecast[0].FCTTIME.hour}/>);
   });
 
   afterEach(() => {
     localStorage.clear();
   });
 
-  it.skip('should exist', () => {
+  it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it.skip('should display a condition icon', () => {
-    expect(wrapper.node.props.children[0].props.src).toEqual('');
+  it('should display a condition icon', () => {
+    expect(wrapper.node.props.children[0].props.src).toEqual('assets/partlycloudy.svg');
   });
 
-  it.skip('should display a temp', () => {
-    expect(wrapper.node.props.children[1].props.children).toEqual('86.1°F');
+  it('should display a temp', () => {
+    expect(wrapper.node.props.children[1].props.children).toEqual('88°F');
   });
 
-  it.skip('should display a time', () => {
-    expect(wrapper.node.props.children[3].props.children).toEqual('');
+  it('should display a time', () => {
+    expect(wrapper.node.props.children[2].props.children).toEqual('6:00 PM');
   });
 });
