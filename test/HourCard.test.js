@@ -14,7 +14,7 @@ describe('HourCard', () => {
       img={weatherData.hourly_forecast[0].icon}
       temp={weatherData.hourly_forecast[0].temp.english}
       time={weatherData.hourly_forecast[0].FCTTIME.civil}
-      key={weatherData.hourly_forecast[0].FCTTIME.hour}/>);
+      key={weatherData.hourly_forecast[0].FCTTIME.hour} />);
   });
 
   afterEach(() => {
@@ -30,7 +30,7 @@ describe('HourCard', () => {
   });
 
   it('should display a temp', () => {
-    expect(wrapper.node.props.children[1].props.children).toEqual('88°F');
+    expect(wrapper.node.props.children[1].props.children).toEqual(["88", "°F"]);
   });
 
   it('should display a time', () => {

@@ -3,14 +3,16 @@ import { shallow, mount } from 'enzyme';
 import Search from '../lib/Components/Search/Search';
 import localStorageMock from '../__mock__/localStorageMock.js';
 import Trie from '../lib/trie'
+import App from '../lib/Components/App/App'
 
 describe('Search', () => {
   let wrapper;
 
 
   beforeEach(() => {
-    wrapper = shallow(<Search setLocation={jest.fn(wrapper.setState( { input: 'A' } ))}/>);
-    const trie = new Trie()
+    let mockFn = jest.fn();
+    wrapper = shallow(<Search setLocation={mockFn}/>);
+    const trie = new Trie();
   });
 
   afterEach(() => {
@@ -27,14 +29,15 @@ describe('Search', () => {
     wrapper.instance().setState({ hasState: false });
     expect(wrapper.state('hasState')).toEqual(false);
   });
-<<<<<<< HEAD
 
-  it('should set the state input on change', () => {
-    wrapper.instance().setState();
-    console.log(wrapper.state.input);
-    expect(wrapper.state('input')).toEqual('A');
+  it.skip('should fire a function on enter press', () => {
+    // console.log('input', wrapper.find('input').prop('children'));
+    // input.simulate(‘keyDown’, {keyCode: 13})
+
+  });
+
+  it('should fire a function on suggestion click', () => {
+
   })
 
-=======
->>>>>>> 1018de37a2f46c4470b11f06ba2a8a7934b534b3
 });
