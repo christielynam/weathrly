@@ -8,14 +8,16 @@ import Location from '../lib/Components/Location'
 describe('DayCard', () => {
   let wrapper;
   let location = new Location(weatherData)
+  let day = location.dailyForecast[0];
 
   beforeEach(() => {
+
     wrapper = shallow( <DayCard
-      img={location.dailyForecast[0].icon}
-      high={location.dailyForecast[0].high.fahrenheit}
-      high={location.dailyForecast[0].low.fahrenheit}
-      day={location.dailyForecast[0].date.weekday}
-      key={location.dailyForecast[0].period} />)
+      img={day.icon}
+      high={day.high.fahrenheit}
+      high={day.low.fahrenheit}
+      day={day.date.weekday}
+      key={day.period} />)
     });
 
   afterEach(() => {
@@ -27,20 +29,19 @@ describe('DayCard', () => {
   });
 
   it('should display a condition icon', () => {
-    expect(location.dailyForecast[0].icon).toEqual('mostlycloudy')
+    console.log('[1]', wrapper.node.props.children[2])
+    expect(wrapper.node.props.children[0].props.src).toEqual('assets/mostlycloudy.svg')
   });
 
   it.skip('should display a high temp', () => {
-    expect().toEqual('H: 98');
+    expect(wrapper.node.props.children[1].props.children).toEqual(["H: ", "88", "°F"]);
   });
 
   it.skip('should display a low temp', () => {
-    const lowTemp = wrapper.instance().find('p.dayLow');
-    expect(lowTemp.text()).toEqual('L: 70');
+    expect(wrapper.node.props.children[2].props.children).toEqual('L: 70');
   });
 
-  it.skip('should display a day', () => {
-    const day = wrapper.instance().find('p.day');
-    expect(day.text()).toEqual('Monday');
+  it('should display a day', () => {
+    expect(wrapper.node.props.children[3].props.children).toEqual('Tuesdayd');
   });
 });
