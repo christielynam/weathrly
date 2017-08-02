@@ -24,5 +24,4 @@ describe('Search', () => {
     wrapper.instance().setState({ hasState: false });
     expect(wrapper.state('hasState')).toEqual(false);
   });
-  
 });
