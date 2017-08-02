@@ -3,19 +3,13 @@ import { shallow, mount } from 'enzyme';
 import HourlyWeather from '../lib/Components/HourlyWeather/HourlyWeather';
 import localStorageMock from '../__mock__/localStorageMock.js';
 import App from '../lib/Components/App/App'
-import HourCard from '../lib/Components/HourCard/HourCard'
-import weatherData from '../__mock__/dataMock'
 
 describe('HourlyWeather', () => {
   let wrapper;
-  hourCard = shallow(<HourCard
-    img={weatherData.hourly_forecast[0].icon}
-    temp={weatherData.hourly_forecast[0].temp.english}
-    time={weatherData.hourly_forecast[0].FCTTIME.civil}
-    key={weatherData.hourly_forecast[0].FCTTIME.hour} />);
+  let app = shallow(<App />)
 
   beforeEach(() => {
-    wrapper = shallow(<HourlyWeather  setLocation={hourCard}/>);
+    wrapper = shallow(<HourlyWeather hours={ app.node.props.children }/>);
   });
 
   afterEach(() => {
