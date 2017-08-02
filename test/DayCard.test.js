@@ -42,6 +42,6 @@ describe('DayCard', () => {
   });
 
   it('should display a day', () => {
-    expect(wrapper.node.props.children[3].props.children).toEqual('Tuesdayd');
+    expect(wrapper.node.props.children[3].props.children).toEqual('Tuesday');
   });
 });
