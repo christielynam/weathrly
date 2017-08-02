@@ -7,33 +7,31 @@ import Location from '../lib/Components/Location'
 
 describe('DayCard', () => {
   let wrapper;
-  let location = new Location(weatherData.dailyForecast)
-  console.log(location);
+  let location = new Location(weatherData)
 
   beforeEach(() => {
-    wrapper = shallow( <DayCard img={location.dailyForecast}
-                                temp={}
-                                time={}
-                                key={} />)
-  });
+    wrapper = shallow( <DayCard
+      img={location.dailyForecast[0].icon}
+      high={location.dailyForecast[0].high.fahrenheit}
+      high={location.dailyForecast[0].low.fahrenheit}
+      day={location.dailyForecast[0].date.weekday}
+      key={location.dailyForecast[0].period} />)
+    });
 
   afterEach(() => {
     localStorage.clear();
   });
 
-  it.skip('should exist', () => {
+  it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it.skip('should display a condition icon', () => {
-    const icon = wrapper.instance().find('img');
-
-    expect(icon.prop('src')).toEqual('http://icons.wxug.com/i/c/k/clear.gif');
+  it('should display a condition icon', () => {
+    expect(location.dailyForecast[0].icon).toEqual('mostlycloudy')
   });
 
   it.skip('should display a high temp', () => {
-    const hiTemp = wrapper.instance().find('p.dayHigh');
-    expect(hiTemp.text()).toEqual('H: 98');
+    expect().toEqual('H: 98');
   });
 
   it.skip('should display a low temp', () => {
