@@ -2,14 +2,19 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import DayCard from '../lib/Components/DayCard/DayCard';
 import localStorageMock from '../__mock__/localStorageMock.js';
-import { dataMock } from '../__mock__/dataMock.js';
+import weatherData from '../__mock__/dataMock.js';
+import Location from '../lib/Components/Location'
 
 describe('DayCard', () => {
   let wrapper;
+  let location = new Location(weatherData.dailyForecast)
+  console.log(location);
 
   beforeEach(() => {
-    let day = dataMock.forecast.simpleforecast[0]
-    wrapper = shallow(<DayCard img={day.icon} high={day.high.fahrenheit} low={day.low.fahrenheit} day={day.date.weekday} key={day.period} />);
+    wrapper = shallow( <DayCard img={location.dailyForecast}
+                                temp={}
+                                time={}
+                                key={} />)
   });
 
   afterEach(() => {
