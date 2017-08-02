@@ -2,38 +2,38 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import HourCard from '../lib/Components/HourCard/HourCard';
 import localStorageMock from '../__mock__/localStorageMock.js';
-import { dataMock } from '../__mock__/dataMock.js';
+import weatherData from '../__mock__/dataMock.js';
+import Location from '../lib/Components/Location'
 
 describe('HourCard', () => {
   let wrapper;
+  let location = new Location(weatherData)
 
   beforeEach(() => {
-    wrapper = shallow(<HourCard />);
+    wrapper = shallow(<HourCard
+      img={weatherData.hourly_forecast[0].icon}
+      temp={weatherData.hourly_forecast[0].temp.english}
+      time={weatherData.hourly_forecast[0].FCTTIME.civil}
+      key={weatherData.hourly_forecast[0].FCTTIME.hour}/>);
   });
 
   afterEach(() => {
     localStorage.clear();
   });
 
-  it.skip('should exist', () => {
+  it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it.skip('should display a condition icon', () => {
-    const component = shallow(<HourCard />);
-    const icon = component.find('img');
-    expect(image.prop('src')).toEqual('http://icons.wxug.com/i/c/k/clear.gif');
+  it('should display a condition icon', () => {
+    expect(wrapper.node.props.children[0].props.src).toEqual('assets/partlycloudy.svg');
   });
 
-  it.skip('should display a temp', () => {
-    const component = shallow(<HourCard />);
-    const temp = component.find('h3');
-    expect(temp.text()).toEqual('86.1');
+  it('should display a temp', () => {
+    expect(wrapper.node.props.children[1].props.children).toEqual('88°F');
   });
 
-  it.skip('should display a time', () => {
-    const component = shallow(<HourCard />);
-    const time = component.find('p');
-    expect(time.text()).toEqual('');
+  it('should display a time', () => {
+    expect(wrapper.node.props.children[2].props.children).toEqual('6:00 PM');
   });
 });

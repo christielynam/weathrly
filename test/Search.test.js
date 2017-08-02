@@ -2,12 +2,15 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Search from '../lib/Components/Search/Search';
 import localStorageMock from '../__mock__/localStorageMock.js';
+import Trie from '../lib/trie'
 
 describe('Search', () => {
   let wrapper;
 
+
   beforeEach(() => {
-    wrapper = shallow(<Search />);
+    wrapper = shallow(<Search setLocation={jest.fn(wrapper.setState( { input: 'A' } ))}/>);
+    const trie = new Trie()
   });
 
   afterEach(() => {
@@ -24,5 +27,11 @@ describe('Search', () => {
     wrapper.instance().setState({ hasState: false });
     expect(wrapper.state('hasState')).toEqual(false);
   });
-  
+
+  it('should set the state input on change', () => {
+    wrapper.instance().setState();
+    console.log(wrapper.state.input);
+    expect(wrapper.state('input')).toEqual('A');
+  })
+
 });

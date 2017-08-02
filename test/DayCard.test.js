@@ -8,16 +8,15 @@ import Location from '../lib/Components/Location'
 describe('DayCard', () => {
   let wrapper;
   let location = new Location(weatherData)
-  let day = location.dailyForecast[0];
 
   beforeEach(() => {
 
     wrapper = shallow( <DayCard
-      img={day.icon}
-      high={day.high.fahrenheit}
-      high={day.low.fahrenheit}
-      day={day.date.weekday}
-      key={day.period} />)
+      img={location.dailyForecast[0].icon}
+      high={location.dailyForecast[0].high.fahrenheit}
+      high={location.dailyForecast[0].low.fahrenheit}
+      day={location.dailyForecast[0].date.weekday}
+      key={location.dailyForecast[0].period} />)
     });
 
   afterEach(() => {
@@ -29,7 +28,6 @@ describe('DayCard', () => {
   });
 
   it('should display a condition icon', () => {
-    console.log('[1]', wrapper.node.props.children[2])
     expect(wrapper.node.props.children[0].props.src).toEqual('assets/mostlycloudy.svg')
   });
 
@@ -42,6 +40,6 @@ describe('DayCard', () => {
   });
 
   it('should display a day', () => {
-    expect(wrapper.node.props.children[3].props.children).toEqual('Tuesdayd');
+    expect(wrapper.node.props.children[3].props.children).toEqual('Tuesday');
   });
 });

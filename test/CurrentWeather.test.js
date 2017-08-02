@@ -43,14 +43,14 @@ describe('CurrentWeather', () => {
   });
 
   it("should display today's expected high", () => {
-    expect(weatherData.forecast.simpleforecast.forecastday[0].high.fahrenheit).toEqual('88')
+    expect(wrapper.find('p.high').prop('children').innerText).toEqual('88 degrees F')
   });
 
   it("should display today's expected low", () => {
-    expect(weatherData.forecast.simpleforecast.forecastday[0].low.fahrenheit).toEqual('72')
+    expect(wrapper.find('p.low').prop('children')).toEqual('72')
   });
 
-  it.skip('should display a daily report', () => {
-    expect(wrapper.find('.dailyReport').prop('children')).toEqual("Today's Forecast: ", "Mainly cloudy. Lows overnight in the low 70s.")
+  it('should display a daily report', () => {
+    expect(wrapper.find('.dailyReport').prop('children')[0]).toEqual("Today's Forecast: ", "Mainly cloudy. Lows overnight in the low 70s.")
   });
 })
