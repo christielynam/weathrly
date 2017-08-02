@@ -7,7 +7,7 @@ describe('DailyWeather', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<DailyWeather />);
+    wrapper = shallow(<DailyWeather days={{ children: [] }} />);
   });
 
   afterEach(() => {
@@ -18,7 +18,7 @@ describe('DailyWeather', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should render the DayCard component', () => {
+  it.only('should render the DayCard component', () => {
     expect(wrapper.find('DayCard').length).toEqual(1);
   });
 });
